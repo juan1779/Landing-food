@@ -8,7 +8,7 @@ function Hero() {
       </header>
 
       <section className="h-3/5 w-2/3 flex justify-center ">
-        <p className="leter text-9xl font-extrabold text-base-200 pr-28  ">
+        <p className="leter text-9xl font-extrabold text-base-200 pr-28 mt-8 ">
           El secreto <br /> de tu cocina
         </p>
       </section>
