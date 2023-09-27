@@ -24,7 +24,7 @@ function Articles() {
   };
 
   return (
-    <main className=" pb-20">
+    <main className=" pb-20 w-screen">
       <h3 className="leter font-extrabold text-center text-7xl text-base-200 py-24">
         Nuestros artículos
       </h3>

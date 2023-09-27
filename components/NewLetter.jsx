@@ -15,36 +15,8 @@ function NewLetter() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const errors = [];
-
-    if (data.nombre === "" || data.nombre.length < 3) {
-      errors.push(
-        'El campo "Nombre" es obligatorio y debe tener al menos 3 caracteres.'
-      );
-    }
-
-    if (data.apellido === "" || data.apellido.length < 3) {
-      errors.push(
-        'El campo "Apellido" es obligatorio y debe tener al menos 3 caracteres.'
-      );
-    }
-
-    if (!data.email.includes("@")) {
-      errors.push('El campo "Email" no es válido.');
-    }
-
-    if (data.telefono.length < 10) {
-      errors.push('El campo "Teléfono" no es válido.');
-    }
-
-    // Si hay errores, mostrarlos al usuario y evitar que el formulario se envíe.
-    if (errors.length > 0) {
-      // Mostrar los errores al usuario.
-      alert(errors.join("\n"));
-
-      // Evitar que el formulario se envíe.
-      return NewLetter(data), alert("Datos enviados con exito");
-    }
+    NewLetter(data);
+    alert("Datos enviados con exito");
   };
 
   return (
@@ -55,11 +27,11 @@ function NewLetter() {
       <form className=" w-3/5 flex m-auto flex-col items-center self-center justify-center">
         <section className=" flex justify-center gap-6 mb-6  flex-wrap ">
           <div className="flex flex-col">
-            <label className="mb-2 text-base font-semibold focus:boder-base-300">
+            <label className="mb-2 text-base font-semibold hover:boder-base-300">
               NOMBRE
             </label>
             <input
-              className="w-96  min-w-full h-12 border-2  active:border-gray-50 focus:text-base-400"
+              className="w-96  min-w-full h-12 border-2   hover:border-base-300 "
               type="text"
               name="nombre"
               required
@@ -69,7 +41,7 @@ function NewLetter() {
           <div className="flex flex-col">
             <label className="mb-2 text-base font-semibold">APELLIDO</label>
             <input
-              className="w-96  min-w-full h-12 border-2 focus:border-base-300"
+              className="w-96  min-w-full h-12 border-2 hover:border-base-300"
               type="text"
               name="apellido"
               required
@@ -81,7 +53,7 @@ function NewLetter() {
           <div className="flex flex-col">
             <label className="mb-2 text-base font-semibold">MAIL</label>
             <input
-              className="w-96 min-w-full h-12 border-2 focus:border-base-300"
+              className="w-96 min-w-full h-12 border-2 hover:border-base-300"
               type="email"
               name="email"
               required
